@@ -1,8 +1,17 @@
 
-.pokemon-container {
-  display: flex; 
-  justify-content: center;
-  align-items: center; 
-  flex-wrap: nowrap; 
+h1{
+    text-align: center;
+    color:rgb(178, 20, 144);
+    padding-top: 1rem;
+    font-family: 'Montserrat', sans-serif;
 
 }
+
+.pokemon-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: nowrap; 
+  
+  
+  }
