@@ -1,0 +1,10 @@
+<!-- <app-pokemon-card></app-pokemon-card> -->
+
+<h1>Equipos Pokemon</h1>
+
+  <div *ngFor="let pokemon of team">
+    <app-pokemon-card [name]="pokemon.name" [spriteUrl]="pokemon.spriteUrl"></app-pokemon-card>
+  </div>
+
+
+

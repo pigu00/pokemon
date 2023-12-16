@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -40,16 +40,22 @@ export class PokeapiserviceService {
     return this.getTypePokemons(TypePokemon.Electric);
   }
   getRockPokemons(){
-    return this.getTypePokemons(TypePokemon.Electric);
+    return this.getTypePokemons(TypePokemon.Rock);
+  }
+  getWaterPokemons(){
+    return this.getTypePokemons(TypePokemon.Water);
+  }
+ 
+  
+
+  getPokemon(id: number): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}pokemon/${id}`);
   }
 
-  getPokemon(id : number){
-    console.error('Not implemented yet. Hint:  https://pokeapi.co/api/v2/pokemon/:id')
-  }
 
 }
 
-enum TypePokemon {
+export enum TypePokemon {
   Fire = 10,
   Electric = 13,
   Rock = 6,

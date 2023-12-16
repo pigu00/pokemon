@@ -4,6 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatCardModule} from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -11,7 +16,12 @@ import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
     PokemonCardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatCardModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
